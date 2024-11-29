@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Western Cape Province, South Africa</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <style>
+        /* Style for the custom text */
+        #custom-text {
+            margin-bottom: 20px; /* Space below the text */
+            text-align: center; /* Align text in the center */
+            font-size: 16px; /* Adjust font size */
+            color: #333; /* Adjust text color */
+        }
+    </style>
+    <style>
+        th {
+            text-align: left; /* Align headers to the left */
+        }
+    </style>
+    <style>
+        th:nth-child(1) { background-color: #2C3E50; color: white; } /* Deep Slate Blue */
+        th:nth-child(2) { background-color: #34495E; color: white; } /* Charcoal Gray */
+        th:nth-child(3) { background-color: #4B5320; color: white; } /* Army Green */
+        th:nth-child(4) { background-color: #8B4513; color: white; } /* Burnt Umber */
+        th:nth-child(5) { background-color: #800020; color: white; } /* Dark Burgundy */
+        th:nth-child(6) { background-color: #B7410E; color: white; } /* Rust Orange */
+        th:nth-child(7) { background-color: #708090; color: white; } /* Steel Gray */
+        th:nth-child(8) { background-color: #001F3F; color: white; } /* Navy Blue */
+        th:nth-child(9) { background-color: #556B2F; color: white; } /* Olive Drab */
+        th:nth-child(10) { background-color: #2F4F4F; color: white; } /* Graphite Black */
+        th:nth-child(11) { background-color: #2A3439; color: white; } /* Gunmetal Blue */
+    </style>    
+</head>
+<body>
+    <h1>Western Cape Province, South Africa</h1>
+    
+    <!-- Custom Text Section -->
+    <div id="custom-text">
+        <p>this is the preview text between the lines</p>
+    </div>
+    <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>City</th>
+                <th>Age</th>
+                <th>Role</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Body Type</th>
+                <th>Endowment</th>
+                <th>Sexuality</th>
+                <th>Expression</th>
+                <th>Looking For</th>
+                <th>Instagram Handle</th>
+            </tr>
+        </thead>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable({
+                ajax: 'https://script.google.com/macros/s/AKfycbztgRzv4sj5VXtMeE_mDywJlwcmNi5xLAyWJQ18gss4jb8CDJPIDBJ8VllJ7v7kqpA/exec', // Replace with your Web App URL
+                columns: [
+                    { data: 'City' },
+                    { data: 'Age' },
+                    { data: 'Role' },
+                    { data: 'Height' },
+                    { data: 'Weight' },
+                    { data: 'Body Type' },
+                    { data: 'Endowment' },
+                    { data: 'Sexuality' },
+                    { data: 'Expression' },
+                    { data: 'Looking For' },
+                    { data: 'Instagram Handle' }
+                ],
+                autoWidth: true // Automatically adjust column widths
+            });
+        });
+    </script>
+</body>
+</html>
